@@ -1,0 +1,23 @@
+name: 'equinix-toronto'
+description: 'Provision cluster in Equinix Montreal'
+provider: 'equinix'
+plain:
+  provision_type: 'metal'
+connection:
+  token: 'Equinix token'
+  project: 'Equinix project'
+  metro: 'TR'
+inputs:
+   - name: 'equinix_os'
+     type: 'list'
+     default: 'ubuntu_20_04'
+     options:
+       - 'ubuntu_20_04'
+   - name: 'equinix_plan'
+     type: 'list'
+     default: 'm3.small.x86'
+     options:
+       - 'm3.small.x86'
+       - 'm3.large.x86'
+       - 'n3.xlarge.x86'
+       - 'n2.xlarge.x86'
